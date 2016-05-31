@@ -7,8 +7,10 @@ from sklearn.feature_extraction import image
 from skimage.util.shape import view_as_blocks
 from os.path import isfile, join
 import scipy.signal
+import scipy
 import matplotlib.pyplot as plt
 import time
+from scipy.linalg import eig
 
 ##HELPER FUNCTIONS
 def VectorizeAndDemean(patch):
@@ -19,13 +21,13 @@ def Substract(x,y):
        return x-y
 
 def H(x):
-    if x>=0:
+    if x>0:
             return 1
     else:
             return 0
 
 def histogramPatch(patch,noOfFilter):  
-     print(patch)
+     #print(patch)
      numberOfBins = int(math.pow(2,noOfFilter))
      plt.hist(patch, bins = [i  for i in range(numberOfBins)])    
      #print(np.histogram(patch, bins = [i  for i in range(numberOfBins)]))
@@ -39,8 +41,7 @@ def PCAFilter(images, patches_size_x, patches_size_y,noOfFilter, width, height):
         for k in range(len(images)):
             #print(k)
             img = images[k]
-            
-            #extract patch and reshape
+           #extract patch and reshape
             patches = image.extract_patches_2d(img, (patches_size_y, patches_size_x))
             patches = np.reshape(np.ravel(patches),(len(patches),total_element_in_patch))
             demeanPatches = patches - patches.mean(axis=1)[:, np.newaxis]           
@@ -52,6 +53,10 @@ def PCAFilter(images, patches_size_x, patches_size_y,noOfFilter, width, height):
                 images_patches = np.concatenate((images_patches, demeanPatches), axis=0)        
         #get the pca
         #print("here")
+        #print("here0")
+        #images_patches = np.dot(images_patches,images_patches.transpose())
+        #print("here")
+        #w, vl, vr = eig(images_patches, left=True)
         pca = decomposition.PCA(n_components=noOfFilter)
         #print(pca)
         pca.fit(images_patches)
@@ -64,7 +69,8 @@ def PCAFilter(images, patches_size_x, patches_size_y,noOfFilter, width, height):
                 for i in range(len(filters)):
                         filter = filters[i,:]
                         filter = np.reshape(filter, (patches_size_y, patches_size_x))
-                        filtered_images.append(scipy.signal.convolve2d(img, filter, mode='same'))
+                        filtered_images.append(cv2.filter2D(img,-1,filter))
+                        #filtered_images.append(scipy.signal.convolve2d(img, filter, mode='same'))
                         #print cv2.filter2D(img,-1,filter)
 
         return filtered_images;
@@ -76,12 +82,17 @@ def hashing(images,number_of_filter1,number_of_filter2,numberOfInitImage):
         for k in range(numberOfInitImage):
                 startCount = k*number_of_filter1*number_of_filter2
                 for i in range(number_of_filter1):
+                       
                         #print images[i*number_of_filter1+1]
-                        hashed_image =math.pow(2,0)*h(images[startCount+i*number_of_filter1+1])
+                        hashed_image =math.pow(2,0)*h(images[startCount+i*number_of_filter1])
+                
                         #print hashed_image
-                        for j in range(2,number_of_filter2):
+                        for j in range(1,number_of_filter2):
                                 hashed_image = hashed_image + math.pow(2,j-1)*h(images[startCount+i*number_of_filter1 + j])
-
+                        
+                        cv2.imshow('image',hashed_image) 
+                        cv2.waitKey(2000)
+                        cv2.destroyAllWindows()    
                         hashed_images.append(hashed_image)
         return hashed_images
 
@@ -132,7 +143,7 @@ print("stage1")
 #PCA Filter stage 2
 filteredImageStage2 = PCAFilter(filteredImageStage1, patches_size_x, patches_size_y,noOfFilter1,width, height)
 print("stage2")
-#filteredImageStage2 = np.array(filteredImageStage2);
+filteredImageStage2 = np.array(filteredImageStage2);
 #hashed
 #range = np.arange(noOfFilter*noOfFilter*readUntil)
 hashedImages = hashing([filteredImageStage2[i] for i in range(noOfFilter1*noOfFilter2*numberOfInitImage)],noOfFilter1,noOfFilter2,numberOfInitImage)
