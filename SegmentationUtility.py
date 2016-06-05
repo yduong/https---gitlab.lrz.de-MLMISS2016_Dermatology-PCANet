@@ -1,21 +1,10 @@
 import numpy as np
 import cv2
 import math
-import os
 from sklearn import decomposition
 from sklearn.feature_extraction import image
 from skimage.util.shape import view_as_blocks
-from os.path import isfile, join
-import scipy
-import matplotlib.pyplot as plt
 
-##HELPER FUNCTIONS
-def VectorizeAndDemean(patch):
-        mean = patch.mean()
-        return np.apply_along_axis(Substract,0,patch,mean)
-
-def Substract(x,y):
-       return x-y
 
 def H(x):
     if x>0:
@@ -25,7 +14,8 @@ def H(x):
 
 def histogramPatch(patch,noOfFilter):  
      numberOfBins = int(math.pow(2,noOfFilter))
-     plt.hist(patch, bins = [i  for i in range(numberOfBins)])    
+     #plt.hist(patch, bins = [i  for i in range(numberOfBins)])    
+     ##pending: display histogram here
      return np.histogram(patch, bins = [i  for i in range(numberOfBins)])
 
 ##FUNCTION TO DO THE FILTER
@@ -43,10 +33,14 @@ def PCAFilter(images, patches_size_x, patches_size_y,noOfFilter):
                 images_patches = demeanPatches
             else:
                 images_patches = np.concatenate((images_patches, demeanPatches), axis=0)        
+        
         #get the pca
         pca = decomposition.PCA(n_components=noOfFilter)
         pca.fit(images_patches)
         filters = pca.components_
+        
+        ##TODO: print filters as images to folder
+        
         #apply filter
         filtered_images = []
         for k in range(len(images)):
@@ -55,8 +49,7 @@ def PCAFilter(images, patches_size_x, patches_size_y,noOfFilter):
                         filter = filters[i,:]
                         filter = np.reshape(filter, (patches_size_y, patches_size_x))
                         filtered_images.append(cv2.filter2D(img,-1,filter))
-                        #filtered_images.append(scipy.signal.convolve2d(img, filter, mode='same'))
-
+                        #TODO: print filtered image  to folder
         return filtered_images;
 
 #FUNCTION TO HASH
@@ -69,6 +62,7 @@ def hashing(images,number_of_filter1,number_of_filter2,numberOfInitImage):
                         hashed_image =math.pow(2,0)*h(images[startCount+i*number_of_filter1])
                         for j in range(1,number_of_filter2):
                                 hashed_image = hashed_image + math.pow(2,j-1)*h(images[startCount+i*number_of_filter1 + j])
+                                #TODO: print filtered image  to folder
                         hashed_images.append(hashed_image)
         return hashed_images
 
@@ -86,45 +80,8 @@ def histogramming(images,patches_size_x,patches_size_y, numberOfImage, L1,L2):
                         blocks = np.ravel(blocks)
                         blocks.shape = (4307,182)
                         histogram = np.apply_along_axis(histogramPatch,1,blocks,L2)
+                        #TODO: display histogram
                         imageHistogram.append(histogram)
                 histograms.append(imageHistogram)
         return histograms
 
-######### MAIN FUNCTION
-
-imageFiles = [f for f in os.listdir("ISBI2016_ISIC_Part1_Training_Data") if (isfile(join("ISBI2016_ISIC_Part1_Training_Data", f)) and f != ".DS_Store")]
-images = []
-numberOfInitImage = min(2,len(imageFiles))
-for i in range(numberOfInitImage):
-    img = cv2.imread("ISBI2016_ISIC_Part1_Training_Data/" + imageFiles[i],0)
-    cv2.imshow('image',img) 
-    cv2.waitKey(2000)
-    cv2.destroyAllWindows()
-    images.append(img)
-    
-#initialize the value
-height, width = images[0].shape
-patches_size_x = 3
-patches_size_y = 3
-noOfFilter1 = 8
-noOfFilter2 = 8
-#PCA Filter stage 1
-filteredImageStage1 = PCAFilter(images, patches_size_x, patches_size_y,noOfFilter1,width, height)
-print("finish stage1")
-
-    
-#PCA Filter stage 2
-filteredImageStage2 = PCAFilter(filteredImageStage1, patches_size_x, patches_size_y,noOfFilter1,width, height)
-print("finish stage2")
-#for i in range(len(filteredImageStage2)):
-#    cv2.imshow('image',filteredImageStage2[i]) 
-#    cv2ows.waitKey(2000)
-#    cv2.destroyAllWind() 
-
-filteredImageStage2 = np.array(filteredImageStage2);
-#hashed
-hashedImages = hashing([filteredImageStage2[i] for i in range(noOfFilter1*noOfFilter2*numberOfInitImage)],noOfFilter1,noOfFilter2,numberOfInitImage)
-
-    
-#histogram
-histogram = histogramming(hashedImages,patches_size_x,patches_size_y,numberOfInitImage,noOfFilter1,noOfFilter2)

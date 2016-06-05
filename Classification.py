@@ -9,5 +9,7 @@ def partition(lst, n):
     return [lst[indices[i]:indices[i+1]] for i in range(n)]
     
 imageFiles = [f for f in listdir("ISBI2016_ISIC_Part1_Training_Data") if (isfile(join("ISBI2016_ISIC_Part1_Training_Data", f)) and f != ".DS_Store")]
+
+
 splitImages = partition(imageFiles, 10)
 print([len(x) for x in splitImages])
