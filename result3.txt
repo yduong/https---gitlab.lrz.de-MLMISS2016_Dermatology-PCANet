@@ -1,0 +1,119 @@
+{'overlapped': False, 'number_of_neighbours': 5, 'noOfFilter1': 4, 'numberOfPositiveBlockPerImage': 100, 'numberOfBins': 16, 'numberOfFold': 5, 'blockSizeY': 4, 'numberOfNegativeBlockPerImage': 100, 'noOfFilter2': 4, 'blockSizeX': 4, 'patches_size_x': 2, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'numberOfInitImage': 100, 'patches_size_y': 2, 'threshold': 0.4, 'sublockY': 4, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'sublockX': 4}
+0.1
+{'auc': 0.63850067499999996, 'f1': 0.66920178325523505, 'recall': 0.85070000000000001, 'precision': 0.55432497103790168, 'accuracy': 0.57895000000000008}
+0.2
+{'auc': 0.63850067499999996, 'f1': 0.64343506578052834, 'recall': 0.73580000000000001, 'precision': 0.57806399951656873, 'accuracy': 0.59289999999999998}
+0.3
+{'auc': 0.63850067499999996, 'f1': 0.62194987103948496, 'recall': 0.66229999999999989, 'precision': 0.59723880853121758, 'accuracy': 0.59894999999999998}
+0.4
+{'auc': 0.63850067499999996, 'f1': 0.56585730129937173, 'recall': 0.53180000000000005, 'precision': 0.62246787603624598, 'accuracy': 0.59709999999999996}
+0.5
+{'auc': 0.63850067499999996, 'f1': 0.50726537021405194, 'recall': 0.42800000000000005, 'precision': 0.65471978595739955, 'accuracy': 0.59440000000000004}
+0.6
+{'auc': 0.63850067499999996, 'f1': 0.42938441505068231, 'recall': 0.32479999999999998, 'precision': 0.68397154544785488, 'accuracy': 0.58370000000000011}
+{'overlapped': False, 'number_of_neighbours': 5, 'noOfFilter1': 8, 'numberOfPositiveBlockPerImage': 100, 'numberOfBins': 256, 'numberOfFold': 5, 'blockSizeY': 4, 'numberOfNegativeBlockPerImage': 100, 'noOfFilter2': 8, 'blockSizeX': 4, 'patches_size_x': 3, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'numberOfInitImage': 100, 'patches_size_y': 3, 'threshold': 0.4, 'sublockY': 4, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'sublockX': 4}
+0.1
+{'auc': 0.86118384999999997, 'f1': 0.75805799393258877, 'recall': 0.92200000000000004, 'precision': 0.64510264165251952, 'accuracy': 0.70560000000000012}
+0.2
+{'auc': 0.86118384999999997, 'f1': 0.77686284574369791, 'recall': 0.86650000000000005, 'precision': 0.70631815791556396, 'accuracy': 0.75170000000000003}
+0.3
+{'auc': 0.86118384999999997, 'f1': 0.79497534242770451, 'recall': 0.82530000000000003, 'precision': 0.77101849571866032, 'accuracy': 0.78810000000000013}
+0.4
+{'auc': 0.86118384999999997, 'f1': 0.78831664444532157, 'recall': 0.7723000000000001, 'precision': 0.80924969989538942, 'accuracy': 0.79380000000000006}
+0.5
+{'auc': 0.86118384999999997, 'f1': 0.77821521695262874, 'recall': 0.71869999999999989, 'precision': 0.85408948404146623, 'accuracy': 0.79679999999999995}
+0.6
+{'auc': 0.86118384999999997, 'f1': 0.751193477051734, 'recall': 0.65939999999999999, 'precision': 0.87865380194552212, 'accuracy': 0.78309999999999991}
+{'overlapped': False, 'number_of_neighbours': 5, 'noOfFilter1': 10, 'numberOfPositiveBlockPerImage': 100, 'numberOfBins': 1024, 'numberOfFold': 5, 'blockSizeY': 4, 'numberOfNegativeBlockPerImage': 100, 'noOfFilter2': 10, 'blockSizeX': 4, 'patches_size_x': 4, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'numberOfInitImage': 100, 'patches_size_y': 4, 'threshold': 0.4, 'sublockY': 4, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'sublockX': 4}
+0.1
+{'auc': 0.85968814999999998, 'f1': 0.75328997727798863, 'recall': 0.93079999999999996, 'precision': 0.63387456949887933, 'accuracy': 0.69469999999999998}
+0.2
+{'auc': 0.85968814999999998, 'f1': 0.76889651320985541, 'recall': 0.88429999999999997, 'precision': 0.68222054739577465, 'accuracy': 0.7340000000000001}
+0.3
+{'auc': 0.85968814999999998, 'f1': 0.79401278347859683, 'recall': 0.84119999999999995, 'precision': 0.75406444183842081, 'accuracy': 0.78220000000000001}
+0.4
+{'auc': 0.85968814999999998, 'f1': 0.7907166101539711, 'recall': 0.79239999999999999, 'precision': 0.7919704515413013, 'accuracy': 0.79105000000000003}
+0.5
+{'auc': 0.85968814999999998, 'f1': 0.78432621077223841, 'recall': 0.73730000000000007, 'precision': 0.84084904910638836, 'accuracy': 0.79820000000000002}
+0.6
+{'auc': 0.85968814999999998, 'f1': 0.7569459704128898, 'recall': 0.67759999999999998, 'precision': 0.86085332093472877, 'accuracy': 0.78354999999999997}
+{'numberOfBins': 16, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'noOfFilter1': 4, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'sublockY': 4, 'sublockX': 4, 'patches_size_x': 2, 'noOfFilter2': 4, 'threshold': 0.4, 'numberOfNegativeBlockPerImage': 100, 'patches_size_y': 2, 'numberOfFold': 5, 'blockSizeX': 8, 'numberOfPositiveBlockPerImage': 100, 'numberOfInitImage': 100, 'blockSizeY': 8, 'overlapped': False, 'number_of_neighbours': 5}
+0.1
+{'accuracy': 0.65360458494965745, 'recall': 0.86611636087497124, 'precision': 0.60424755910801231, 'f1': 0.71109994849644464, 'auc': 0.75980375027075664}
+0.2
+{'accuracy': 0.68497784349413793, 'recall': 0.74040615028901691, 'precision': 0.66182199688563037, 'f1': 0.69749526540098761, 'auc': 0.75980375027075664}
+0.3
+{'accuracy': 0.69680492998757149, 'recall': 0.64205751766573305, 'precision': 0.71617594756999603, 'f1': 0.67460318161719246, 'auc': 0.75980375027075664}
+0.4
+{'accuracy': 0.68388332342739555, 'recall': 0.52773783179054967, 'precision': 0.75914454880375559, 'f1': 0.61996554157560746, 'auc': 0.75980375027075664}
+0.5
+{'accuracy': 0.66452110604909753, 'recall': 0.41068325171036468, 'precision': 0.81961473833430476, 'f1': 0.54440880679151593, 'auc': 0.75980375027075664}
+0.6
+{'accuracy': 0.63777347615713198, 'recall': 0.32228963889888035, 'precision': 0.84987953102798863, 'f1': 0.46508508588144937, 'auc': 0.75980375027075664}
+{'numberOfBins': 256, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'noOfFilter1': 8, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'sublockY': 4, 'sublockX': 4, 'patches_size_x': 3, 'noOfFilter2': 8, 'threshold': 0.4, 'numberOfNegativeBlockPerImage': 100, 'patches_size_y': 3, 'numberOfFold': 5, 'blockSizeX': 8, 'numberOfPositiveBlockPerImage': 100, 'numberOfInitImage': 100, 'blockSizeY': 8, 'overlapped': False, 'number_of_neighbours': 5}
+0.1
+{'accuracy': 0.71352139414161664, 'recall': 0.92223235193115338, 'precision': 0.64919721150280529, 'f1': 0.76046571352141201, 'auc': 0.85311114980046998}
+0.2
+{'accuracy': 0.75700255577376052, 'recall': 0.84882339169634169, 'precision': 0.71630118329881987, 'f1': 0.77480406505065802, 'auc': 0.85311114980046998}
+0.3
+{'accuracy': 0.78037146215853104, 'recall': 0.79280108505439906, 'precision': 0.77243577362268989, 'f1': 0.77993628170455676, 'auc': 0.85311114980046998}
+0.4
+{'accuracy': 0.77235311659757677, 'recall': 0.69815030181582638, 'precision': 0.81685669111599279, 'f1': 0.75027995851156137, 'auc': 0.85311114980046998}
+0.5
+{'accuracy': 0.76166189987755017, 'recall': 0.6113264026280788, 'precision': 0.86757705566801779, 'f1': 0.71514216565898647, 'auc': 0.85311114980046998}
+0.6
+{'accuracy': 0.72814037448720859, 'recall': 0.51111024992988807, 'precision': 0.8913776785124744, 'f1': 0.64807072757472228, 'auc': 0.85311114980046998}
+{'numberOfBins': 1024, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'noOfFilter1': 10, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'sublockY': 4, 'sublockX': 4, 'patches_size_x': 4, 'noOfFilter2': 10, 'threshold': 0.4, 'numberOfNegativeBlockPerImage': 100, 'patches_size_y': 4, 'numberOfFold': 5, 'blockSizeX': 8, 'numberOfPositiveBlockPerImage': 100, 'numberOfInitImage': 100, 'blockSizeY': 8, 'overlapped': False, 'number_of_neighbours': 5}
+0.1
+{'accuracy': 0.77445389123205899, 'recall': 0.87989164596051028, 'precision': 0.72511636850537342, 'f1': 0.79354642836057721, 'auc': 0.8762134436960306}
+0.2
+{'accuracy': 0.80567787972272842, 'recall': 0.80891959169995842, 'precision': 0.80134562408368615, 'f1': 0.80363916860830709, 'auc': 0.8762134436960306}
+0.3
+{'accuracy': 0.8171794735658342, 'recall': 0.74608835650286154, 'precision': 0.86639225513189788, 'f1': 0.79999062412356747, 'auc': 0.8762134436960306}
+0.4
+{'accuracy': 0.80298222015872778, 'recall': 0.67710459568868653, 'precision': 0.89960208552888421, 'f1': 0.77101392695873006, 'auc': 0.8762134436960306}
+0.5
+{'accuracy': 0.78204029647710382, 'recall': 0.6000336712502119, 'precision': 0.93493186294601338, 'f1': 0.72930376317799506, 'auc': 0.8762134436960306}
+0.6
+{'accuracy': 0.76038187244744115, 'recall': 0.54305908674737857, 'precision': 0.94938502771220235, 'f1': 0.68898817973006909, 'auc': 0.8762134436960306}
+{'numberOfBins': 1024, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'noOfFilter1': 10, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'sublockY': 4, 'sublockX': 4, 'patches_size_x': 5, 'noOfFilter2': 10, 'threshold': 0.4, 'numberOfNegativeBlockPerImage': 100, 'patches_size_y': 5, 'numberOfFold': 5, 'blockSizeX': 8, 'numberOfPositiveBlockPerImage': 100, 'numberOfInitImage': 100, 'blockSizeY': 8, 'overlapped': False, 'number_of_neighbours': 5}
+0.1
+{'threshold': 0.4, 'number_of_neighbours': 5, 'noOfFilter1': 10, 'noOfFilter2': 10, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'blockSizeX': 8, 'numberOfBins': 1024, 'overlapped': False, 'sublockX': 4, 'numberOfPositiveBlockPerImage': 100, 'numberOfFold': 5, 'numberOfInitImage': 100, 'blockSizeY': 8, 'numberOfNegativeBlockPerImage': 100, 'sublockY': 4, 'patches_size_y': 5, 'patches_size_x': 5, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256'}
+0.1
+{'accuracy': 0.76567193618342144, 'auc': 0.88528617021984835, 'precision': 0.70520992195190146, 'f1': 0.79169767166759986, 'recall': 0.90500308651057038}
+0.2
+{'accuracy': 0.80371469050417477, 'auc': 0.88528617021984835, 'precision': 0.78067510412392149, 'f1': 0.80767689336721671, 'recall': 0.83881837285958338}
+0.3
+{'accuracy': 0.82462807235909152, 'auc': 0.88528617021984835, 'precision': 0.84911884454612463, 'f1': 0.81439935244467665, 'recall': 0.78477804688077391}
+0.4
+{'accuracy': 0.81801247075632166, 'auc': 0.88528617021984835, 'precision': 0.88490185588041581, 'f1': 0.7960176975479667, 'recall': 0.7259440755038078}
+0.5
+{'accuracy': 0.80429605404497873, 'auc': 0.88528617021984835, 'precision': 0.92074140389330261, 'f1': 0.76700195138707428, 'recall': 0.66018358721827186}
+0.6
+{'accuracy': 0.78212542988626743, 'auc': 0.88528617021984835, 'precision': 0.93584894766806026, 'f1': 0.72818562002070941, 'recall': 0.59901585714172589}
+{'numberOfPositiveBlockPerImage': 100, 'sublockX': 4, 'numberOfBins': 16, 'overlapped': False, 'blockSizeX': 16, 'number_of_neighbours': 5, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'blockSizeY': 16, 'patches_size_x': 2, 'patches_size_y': 2, 'noOfFilter1': 4, 'noOfFilter2': 4, 'threshold': 0.4, 'sublockY': 4, 'numberOfInitImage': 100, 'numberOfNegativeBlockPerImage': 100, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'numberOfFold': 5}
+0.1
+{'recall': 0.7710076137153451, 'precision': 0.63362565246454905, 'f1': 0.69514883718619735, 'auc': 0.79146336453106358, 'accuracy': 0.73061476457061136}
+0.2
+{'recall': 0.61933654546534078, 'precision': 0.71416226136771177, 'f1': 0.6631064540490611, 'auc': 0.79146336453106358, 'accuracy': 0.74946181740484719}
+0.3
+{'recall': 0.51207345554981332, 'precision': 0.80895805368412588, 'f1': 0.62684858112955977, 'auc': 0.79146336453106358, 'accuracy': 0.75708364993838662}
+0.4
+{'recall': 0.39736975221373194, 'precision': 0.84545847947813502, 'f1': 0.54013952331138226, 'auc': 0.79146336453106358, 'accuracy': 0.73035559168887076}
+0.5
+{'recall': 0.28762895434501118, 'precision': 0.90382949365038745, 'f1': 0.43594261806467183, 'auc': 0.79146336453106358, 'accuracy': 0.70334368280086146}
+0.6
+{'recall': 0.22316809398416892, 'precision': 0.92184309660404673, 'f1': 0.3589273236260655, 'auc': 0.79146336453106358, 'accuracy': 0.68203652152086813}
+{'numberOfPositiveBlockPerImage': 100, 'sublockX': 4, 'numberOfBins': 256, 'overlapped': False, 'blockSizeX': 16, 'number_of_neighbours': 5, 'groundTruthImagesFolder': 'inputImage/groudtruthImage256x256', 'blockSizeY': 16, 'patches_size_x': 3, 'patches_size_y': 3, 'noOfFilter1': 8, 'noOfFilter2': 8, 'threshold': 0.4, 'sublockY': 4, 'numberOfInitImage': 100, 'numberOfNegativeBlockPerImage': 100, 'trainingImagesFolder': 'inputImage/resizeTrainImage256x256', 'numberOfFold': 5}
+0.1
+{'recall': 0.83013225259218404, 'precision': 0.64104092786509559, 'f1': 0.71967064359003852, 'auc': 0.83107032513303225, 'accuracy': 0.74200898359853962}
+0.2
+{'recall': 0.69257285653168688, 'precision': 0.7275176181949361, 'f1': 0.7057846331854335, 'auc': 0.83107032513303225, 'accuracy': 0.77072890355826029}
+0.3
+{'recall': 0.59851574933991614, 'precision': 0.81667027186931451, 'f1': 0.686616422232323, 'auc': 0.83107032513303225, 'accuracy': 0.78350066502846816}
+0.4
+{'recall': 0.47898037535449633, 'precision': 0.86790340548567357, 'f1': 0.61394071307795983, 'auc': 0.83107032513303225, 'accuracy': 0.76100153582864505}
+0.5
+{'recall': 0.37142622856262009, 'precision': 0.92888397201203399, 'f1': 0.52773878927344953, 'auc': 0.83107032513303225, 'accuracy': 0.73624055186393245}
+0.6
+{'recall': 0.28126804862798771, 'precision': 0.93671023206779347, 'f1': 0.43086404864978201, 'auc': 0.83107032513303225, 'accuracy': 0.7043301131996953}
